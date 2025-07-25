@@ -19,6 +19,8 @@ const BagMap = document.getElementById("BagMap");
 const HouseMap = document.getElementById("HouseMap");
 const arrow = document.querySelector(".arrow");
 const arrowExit = document.querySelector("#arrowExit");
+const  KitchenList = document.getElementsByTagName("#HO3 .dialogue section");
+
 // const HO2 = document.getElementById("HO2");
 
 // map.forEach(element => {
@@ -95,7 +97,6 @@ function enter(){
 
   document.getElementById("scene3").style.display = "block";
   document.getElementById("HO3").style.display = "block";
-  KitchenList = document.getElementsByTagName("#HO3 .dialogue section");
   KitchenList[0].style.display = "block";
 
 
