@@ -19,7 +19,10 @@ const BagMap = document.getElementById("BagMap");
 const HouseMap = document.getElementById("HouseMap");
 const arrow = document.querySelector(".arrow");
 const arrowExit = document.querySelector("#arrowExit");
-const  KitchenList = document.getElementsByTagName("#HO3 .dialogue section");
+const  KitchenDia = document.querySelector("#HO3 .dialogue");
+KitchenList = KitchenDia.getElementsByTagName("section ");
+
+const arrowFood = document.querySelector("#arrowFood");
 
 // const HO2 = document.getElementById("HO2");
 
@@ -118,7 +121,22 @@ arrow.onclick = function () {
   }
   
 };
+arrowFood.onclick = function () {
+
+     i++;
+  KitchenList[i-1].style.display = "none";
+  KitchenList[i].style.display = "block";
+  console.log("i: " + i);
+  if (i == KitchenList.length - 1) {
+    // List[i + 1].style.display = "block";
+    arrowFood.style.display = "none";
+    // choice.style.display = "grid";
+  }
+  
+};
+
 arrowExit.onclick = function () {
+  i=0;
   document.getElementById("HO2").style.display = "none";
 
   

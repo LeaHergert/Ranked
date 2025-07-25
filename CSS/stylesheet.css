@@ -268,7 +268,7 @@ g:hover .image-mapper-shape {
 
 }
 
-.arrow, #arrowExit {
+.arrow, #arrowExit, #arrowFood {
   cursor: pointer;
   font-size: 2em;
   justify-self: end;
