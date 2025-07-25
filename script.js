@@ -1,6 +1,9 @@
 const sliderContainer = document.querySelector(".sliderContainer");
 const hCmap = document.getElementById("hCmap");
 const scene1 = document.getElementById("scene1");
+const scene2 = document.getElementById("scene2");
+const scene3 = document.getElementById("scene3");
+
 const dialogue = document.querySelector(".dialogue");
 sectionList = dialogue.getElementsByTagName("section");
 let i = 0;
@@ -11,6 +14,12 @@ const bracelet = document.getElementById("bracelet");
 const menuX = document.getElementById("menuX");
 const map = document.querySelectorAll(".image-mapper-shape");
 const mapDiv = document.getElementById("mapDiv");
+const HoMap = document.getElementById("HoMap");
+const BagMap = document.getElementById("BagMap");
+const HouseMap = document.getElementById("HouseMap");
+const arrow = document.querySelector(".arrow");
+const arrowExit = document.querySelector("#arrowExit");
+// const HO2 = document.getElementById("HO2");
 
 // map.forEach(element => {
 // element.onclick=
@@ -27,16 +36,16 @@ function mapId(mapName) {
 function toggleDiv(Object) {
   mapDiv.style.display = "block";
   if (Object == "flower1") {
-    mapDiv.innerText = "Flowers";
+    mapDiv.innerText = "I love the flowers here";
   }
   if (Object == "flower2") {
-    mapDiv.innerText = "Flowers";
+    mapDiv.innerText = "I love the flowers here";
   }
   if (Object == "center") {
-    mapDiv.innerText = "Center";
+    mapDiv.innerText = "The vitality center, coming here makes me feel save";
   }
   if (Object == "camera") {
-    mapDiv.innerText = "Camera";
+    mapDiv.innerText = "Smile for the camera!";
   }
 }
 
@@ -58,13 +67,36 @@ function changeLocation(Location) {
 
   let sceneNr = Location.slice(2);
   console.log(sceneNr);
-    document.getElementsByClassName("nextSliderCont")[sceneNr-2].remove();
+  document.getElementsByClassName("nextSliderCont")[sceneNr - 2].remove();
 
   sceneImg = document.getElementById("scene" + sceneNr);
   document.getElementById("scene1").remove();
   document.getElementById("hCmap").remove();
 
-  sceneImg.style.display = "block";
+  // sceneImg.style.display = "block";
+  bracelet.style.display = "none";
+  menuX.style.display = "none";
+  HoMap.style.display = "block";
+  document.getElementById("HO2").style.display = "block";
+  document.getElementById("OneLiner").style.display = "block";
+
+}
+
+function pickUp(item) {
+  HouseMap.style.display = "block";
+  BagMap.style.display = "none";
+  scene2.style.display = "block";
+}
+
+function enter(){
+  HouseMap.style.display = "none";
+
+  document.getElementById("scene3").style.display = "block";
+  document.getElementById("HO3").style.display = "block";
+  KitchenList = document.getElementsByTagName("#HQ3 .dialogue section");
+  KitchenList[0].style.display = "block";
+
+
 }
 
 console.log(sectionList);
@@ -73,14 +105,20 @@ pathList = "null";
 sectionList[0].style.display = "block";
 console.log("Liste: " + sectionList.length);
 
-const arrow = document.querySelector(".arrow");
 
 arrow.onclick = function () {
   if (arrow.classList.contains("arrowPath")) {
     next(pathList);
   } else {
+    
     next(sectionList);
   }
+  
+};
+arrowExit.onclick = function () {
+  document.getElementById("HO2").style.display = "none";
+
+  
 };
 
 function next(List) {
@@ -149,7 +187,6 @@ menuX.onclick = function () {
   bracelet.style.display = "none";
   menuX.style.display = "none";
   document.getElementById("HC1").style.display = "grid";
-
   menuDiv.style.display = "none";
 };
 

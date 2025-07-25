@@ -67,7 +67,7 @@ h3 {
   height: 85vh;
   z-index: 0;
 }
-#scene1{
+#scene1, #scene3{
   display: none;
 }
 .sliderContainer {
@@ -161,13 +161,16 @@ g:hover .image-mapper-shape {
   opacity: 20%;
 }
 
-#hCmap{
+#hCmap, #HoMap{
   position: absolute;
   height: 85vh;
   aspect-ratio: 887/591;
   align-items: end;
-  z-index: 2;
+  z-index: 99;
 
+}
+#HoMap{
+  display: none;
 }
 #mapDiv{
   display: none;
@@ -181,6 +184,12 @@ g:hover .image-mapper-shape {
   border-radius: 0 0 10px 0;
 }
 
+#HouseMap{
+  display: none;
+}
+#scene2{
+  display: none;
+}
 #inventory {
   z-index: 1;
   position: absolute;
@@ -240,6 +249,7 @@ g:hover .image-mapper-shape {
   display: none;
   align-self: end;
   position: relative;
+  z-index: 99;
 }
 
 
@@ -258,7 +268,7 @@ g:hover .image-mapper-shape {
 
 }
 
-.arrow {
+.arrow, #arrowExit {
   cursor: pointer;
   font-size: 2em;
   justify-self: end;
