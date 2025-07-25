@@ -91,10 +91,11 @@ function pickUp(item) {
 function enter(){
   HouseMap.style.display = "none";
   document.getElementById("scene2").style.display = "none";
+  HoMap.style.display = "none";
 
   document.getElementById("scene3").style.display = "block";
   document.getElementById("HO3").style.display = "block";
-  KitchenList = document.getElementsByTagName("#HQ3 .dialogue section");
+  KitchenList = document.getElementsByTagName("#HO3 .dialogue section");
   KitchenList[0].style.display = "block";
 
 
