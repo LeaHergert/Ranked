@@ -90,6 +90,7 @@ function pickUp(item) {
 
 function enter(){
   HouseMap.style.display = "none";
+  document.getElementById("scene2").style.display = "none";
 
   document.getElementById("scene3").style.display = "block";
   document.getElementById("HO3").style.display = "block";

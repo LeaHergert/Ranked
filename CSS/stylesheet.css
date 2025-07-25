@@ -83,7 +83,7 @@ h3 {
 }
 
 #menuBtn {
-  /* display: none; */
+  display: none;
   width: 5em;
   height: 5em;
   cursor: pointer;
