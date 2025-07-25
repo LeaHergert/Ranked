@@ -1,0 +1,313 @@
+:root {
+  --energizing-violet: #873df5;
+  --optimistic-yellow: #fffd8c;
+  --soft-grey: #d3cfdb;
+  --cozy-green: #036e54;
+  --hopeful-sage: #d3ecd8;
+  --dark-grey: #191c1f;
+  --mouse-grey: #59616a;
+  /* --dark-grey: #d3cfdb; */
+  --bright-grey: #efebf6;
+}
+
+@font-face {
+  font-family: "darumadropone";
+  src: url("DarumadropOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: "quicksand";
+  src: url("Quicksand-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "saira";
+  src: url("Saira-VariableFont_wdth\,wght.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  max-width: 105vw;
+  display: grid;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  font-family:saira;
+  margin: 1vh auto;
+  min-height: 4vh;
+  color: rgba(255, 255, 255, 0.731);
+ text-shadow: 
+    0 0 5px rgba(0, 255, 255, 0.6),
+    0 0 10px rgba(0, 255, 255, 0.6), 
+    0 0 20px rgba(0, 255, 255, 0.6),
+    0 0 40px rgba(0, 255, 255, 0.6),
+    0 0 80px rgba(0, 255, 255, 0.6), 
+    0 0 120px rgba(0, 255, 255, 0.6);
+  }
+
+h3 {
+
+  margin: 0.1em 0;
+}
+
+#game-area {
+  height: 85vh;
+  margin: 0 auto;
+  aspect-ratio: 887/591;
+  display: grid;
+}
+
+.scene {
+  position: absolute;
+  height: 85vh;
+  z-index: 0;
+}
+#scene1{
+  display: none;
+}
+.sliderContainer {
+  position: relative;
+  display: none;
+  height: 85vh;
+  aspect-ratio: 887/591;
+  align-items: end;
+  z-index: 2;
+}
+#HO2{
+  display: none;
+}
+
+#menuBtn {
+  /* display: none; */
+  width: 5em;
+  height: 5em;
+  cursor: pointer;
+  background-color: rgba(245, 245, 220, 0.8);
+  padding: 0.25em;
+  margin-right: 1em;
+  margin-top: 1em;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 999;
+  justify-self: right;
+}
+.menuDiv{
+  display: none;
+  position: absolute;
+  background-color: #191c1f;
+  width: 100%;
+  height: 85vh;
+  justify-content: center;
+}
+.menuDiv img{
+  /* position: relative; */
+  
+  margin: 0 auto;
+  width: auto;
+  height: 100%;
+
+}
+
+#menuX {
+  z-index: 1111;
+  display: none;
+  width: 5em;
+  height: 5em;
+  cursor: pointer;
+  position: absolute;
+  padding: 0.25em;
+  right: 1em;
+
+}
+
+#menuBtn img {
+  width: 100%;
+}
+
+#menuX img {
+  height: 100%;
+}
+
+#bracelet {
+  display: none;
+  z-index: 100;
+  position: relative;
+  aspect-ratio: 887/591;
+  ;
+  background-color: #000000e8;
+}
+
+#bracelet svg {
+  height: 85vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;;
+}
+
+#bracelet svg image {}
+
+.image-mapper-shape {
+  fill: rgba(0, 0, 0, 0);
+}
+
+g:hover .image-mapper-shape {
+  stroke: white;
+  stroke-width: 2px;
+  opacity: 20%;
+}
+
+#hCmap{
+  position: absolute;
+  height: 85vh;
+  aspect-ratio: 887/591;
+  align-items: end;
+  z-index: 2;
+
+}
+#mapDiv{
+  display: none;
+    padding: 1em;
+    font-family: quicksand;
+  min-height: 4em;
+  width: 80%;
+  height: auto;
+  background: #f5b68c8a;
+  position: absolute;
+  border-radius: 0 0 10px 0;
+}
+
+#inventory {
+  z-index: 1;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  padding: 0.5em;
+  background: #f5b68c8a;
+  color: white;
+  overflow: hidden;
+  /* border: 2px solid #fff; */
+  display: none;
+  z-index: 1000;
+  /* animation: slideInTop 2s ease-out; */
+}
+
+@keyframes slideInTop {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#inventoryList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  height: 5em;
+
+}
+
+
+
+.image-mapper-shape {
+  fill: rgba(0, 0, 0, 0);
+}
+
+g:hover .image-mapper-shape {
+  stroke: white;
+  stroke-width: 0.4em;
+  opacity: 20%;
+}
+
+.items {
+  justify-self: center;
+  align-items: center;
+  width: auto;
+  height: 5em;
+}
+
+.nextSliderCont {
+  background-color: rgba(245, 245, 220, 0.8);
+  padding: 1em;
+  display: none;
+  align-self: end;
+  position: relative;
+}
+
+
+
+.path {
+  display: none;
+}
+
+.dialogue,
+.path {
+  font-family: "quicksand";
+  font-weight: 600;
+  font-size: 1.25em;
+  position: relative;
+  padding: 0 0 1em 0;
+
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 2em;
+  justify-self: end;
+}
+
+.dialogue section,
+.path section {
+  display: none;
+
+}
+
+#choice {
+  display: none;
+  grid-template-columns: auto;
+  padding-top: 1em;
+  gap: 2%;
+}
+
+
+
+.slider-button {
+  position: relative;
+  font-weight: 700;
+  font-family: "quicksand";
+  font-size: 1em;
+  text-transform: uppercase;
+  background-color: hsla(0, 47%, 85%, 0.6);
+  color: black;
+  padding: 0.5em 1em;
+
+  border: none;
+  /* line-height: 1em; */
+  height: min-content;
+  width: auto;
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  bottom: 20px;
+  padding: 0.25em 4em;
+  display: none;
+  border-radius: 0;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}

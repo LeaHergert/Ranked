@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranked</title>
+    <link rel="stylesheet" href="CSS/stylesheet.css">
+    <script src="https://kit.fontawesome.com/28d23c1e4c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Ranked</h1>
+    <div id="game-area">
+
+        <!-- Map -->
+        <div id="hCmap">
+            <div id="mapDiv">
+
+            </div>
+            <svg style="width:100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 1706 1137">
+                <image xlink:href="Components/Scenes/HealthCenter/HC1.png" style="width: 1706px;"></image>
+
+                <!-- <a xlink:href="#"  xlink:title="Look">
+                    <g>
+                        <polygon onclick="toggleDiv(this.id)" class="image-mapper-shape" id="" data-index="1"></polygon>
+                    </g>
+                </a> -->
+                <a xlink:href="#" xlink:title="Talk">
+
+                    <g>
+                        <rect onClick="mapId(this.id)" id="Ophilia" x="643.0747822182082" y="686.8442700131648"
+                            width="50.503255148026824" height="151.50976544408024" class="image-mapper-shape"
+                            data-index="3"></rect>
+                    </g>
+                </a>
+                <a xlink:href="#" xlink:title="Look">
+                    <g>
+                        <rect onclick="toggleDiv(this.id)" id="camera" x="760.9157108969373" y="622.8734801589973"
+                            width="33.668836765351216" height="33.66883676535133" class="image-mapper-shape"
+                            data-index="5"></rect>
+                    </g>
+                </a>
+                <a xlink:href="#" target="" xlink:title="Look">
+                    <g>
+                        <polygon onclick="toggleDiv(this.id)" id="flower1" class="image-mapper-shape" data-index="8"
+                            points="973.029 875.39 1195.24 808.052 1690.18 1013.43 1680.07 1117.81 1117.81 1124.54">
+                        </polygon>
+                    </g>
+                </a>
+                <a xlink:href="#" xlink:title="Look">
+                    <g>
+                        <polygon onclick="toggleDiv(this.id)" id="flower2" class="image-mapper-shape" data-index="9"
+                            points="599.305 875.39 313.12 777.75 16.8344 962.929 23.5682 1100.97 457.896 1114.44">
+                        </polygon>
+                    </g>
+                </a>
+                <a xlink:href="#" xlink:title="Look">
+                    <g>
+                        <rect onclick="toggleDiv(this.id)" id="center" x="30.301953088816088" y="208.7467879451775"
+                            width="1585.8022116480417" height="353.52278603618765" class="image-mapper-shape"
+                            data-index="11"></rect>
+                    </g>
+                </a>
+            </svg>
+        </div>
+
+        <!-- Scene -->
+        <img class="scene" id="scene1" src="Components/Scenes/HealthCenter/Hanna_Ophilia_HC.png" alt="">
+        <img class="scene" id="scene2" src="Components/Scenes/Home/Home_Bag.png" alt="">
+        <img class="scene" id="scene3" src="Components/Scenes/Home/Home_Bag.png" alt="">
+
+        <div id="menuBtn">
+            <img src="Components/Objects/Bracelet.png" alt="">
+        </div>
+
+        <div id="bracelet">
+            <div id="menuX">
+                <img src="Components/Interactions/Phone/exit.png" alt="">
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2866 1828">
+
+                <image xlink:href="Components/Interactions/Phone/menu.png" style="width: 2866px;"></image>
+                <a xlink:href="#" xlink:title="Todo">
+                    <g>
+                        <circle onclick="toggleMenu('bTodo')" cx="568.1392752545291" cy="568.1392752545291"
+                            r="147.07571140638544" class="image-mapper-shape selected" data-index="1"></circle>
+                    </g>
+                </a>
+                <a xlink:href="#" xlink:title="Map">
+                    <g>
+                        <circle onclick="toggleMenu('bMap')" cx="978.7273229174664" cy="453.5565642788258"
+                            r="149.45859295959897" class="image-mapper-shape" data-index="2"></circle>
+                    </g>
+                </a>
+                <a xlink:href="#" xlink:title="Contacts">
+                    <g>
+                        <circle onclick="toggleMenu('bContacts')" cx="654.0763084863067" cy="888.0160100617012"
+                            r="144.3380884528181" class="image-mapper-shape" data-index="8"></circle>
+                    </g>
+                </a>
+                <a xlink:href="#" xlink:title="Health">
+                    <g>
+                        <circle onclick="toggleMenu('bHealth')" cx="1064.6643561492438" cy="759.1104602140348"
+                            r="147.07571140638544" class="image-mapper-shape" data-index="12"></circle>
+                    </g>
+                </a>
+            </svg>
+            <div class="menuDiv" id="bMap">
+                <!-- Image Map Generated by https://www.fla-shop.com/image-map/ -->
+                <svg style="width:100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 2700 2197">
+
+                    <image xlink:href="Components/Interactions/Phone/map.png" style="width: 2700px;"></image>
+                    <a xlink:href="#"  xlink:title="Go Home">
+                        <g>
+                            <polygon onclick="changeLocation('HO2')" class="image-mapper-shape" data-index="1"
+                                points="1161.89 1217.21 1290.98 1346.31 1192.62 1549.18 1063.52 1364.75"></polygon>
+                        </g>
+                    </a>
+                </svg>
+            </div>
+            <div class="menuDiv" id="bContacts">
+
+            </div>
+            <div class="menuDiv" id="bCalendar">
+
+            </div>
+            <div class="menuDiv" id="bHealth">
+
+            </div>
+            <div class="menuDiv" id="bTodo">
+
+            </div>
+        </div>
+
+        <div id="inventory">
+            <div id="inventoryList">
+                <img class="items" src="Components/Objects/Bracelet.png" alt="">
+                <img class="items" src="Components/Objects/Letter.png" alt="">
+            </div>
+        </div>
+
+        <!-- <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+            <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+            <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+        </map> -->
+
+
+        <div class="nextSliderCont" id="HC1">
+            <div class="dialogue">
+                <section class="right">
+                    <h3>Hanna</h3>
+                    You made it out early. How was your scan?
+                </section>
+                <section class="left">
+                    <h3>Ophilia</h3>
+                    The nurse acted a little weird, but they said nothing, so I guess it's good. How was yours?
+                </section>
+                <section class="right">
+                    <h3>Hanna</h3>
+                    Same as always as far as I can tell, I hope it's better than last month, I've been on point
+                    with my daily runs.
+                </section>
+                <section class="left ">
+                    <h3>Ophilia</h3>
+                    Didn't you score 97 last year? You can't get much better than that.
+                </section>
+
+
+
+
+
+
+            </div>
+            <div class="path" id="ran">
+                <section class="right">
+                    <h3>Hanna</h3>
+                    The rankings are next week, I want to do my best. Aren't you nervous?
+                </section>
+                <section class="left">
+                    <h3>Ophilia</h3>
+                    Why would I? I followed tha plans, ate my meals, I can't imagine to be moved to another
+                    district.
+                </section>
+                <section class="left ">
+                    <h3>Hanna</h3>
+                    Yes I know, but it's still exciting, even when you know what's coming.
+
+                </section>
+            </div>
+
+
+            <div class="path" id="nut">
+                <section class="right">
+                    <h3>Hanna</h3>
+                    I think they might adjust my nutrition again, I burned 0,5% more carbs than last
+                    month.
+                </section>
+                <section class="left">
+                    <h3>Ophilia</h3>
+                    Classic. I got fewer dopamine drops last week over a 0.5-point dip.
+                </section>
+                <section class="left ">
+                    <h3>Hanna</h3>
+                    I'm glad that our system takes care of that, imagine having to read nutrition labels
+                    and calculate everything yourself like in the old times.
+
+                </section>
+            </div>
+
+            <div class="path" id="tra">
+                <section class="right">
+                    <h3>Hanna</h3>
+                    Is your fitness plan still set to 7 AM
+                </section>
+                <section class="left">
+                    <h3>Ophilia</h3>
+                    No, it got moved to the afternoon. I thought it was a mistake.
+                </section>
+                <section class="left ">
+                    <h3>Hanna</h3>
+                    The system doesn’t make mistakes. You probably overthink and need longer warm-ups.
+                </section>
+            </div>
+            <div class="path end" id="hom">
+                <section class="right">
+                    <h3>Hanna</h3>
+                    Well, can't get better if you don't try. But let's go home, mom is waiting.
+                </section>
+                <section class="left">
+                    <h3>Ophilia</h3>
+                    Right, I hope I get a smoothie in my nutri-pack today!
+                </section>
+
+            </div>
+            <div id="choice">
+                <button class="slider-button " id="rankings">
+                    Talk about rankings
+                </button>
+                <button class="slider-button" id="nutrition">
+                    Talk about nutrition
+                </button>
+                <button class="slider-button" id="training">
+                    Talk about training
+                </button>
+                <button class="slider-button end" id="home">
+                    Go Home
+                </button>
+            </div>
+            <div class="arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="nextSliderCont" id="HO2">
+            <div class="dialogue">
+                <section class="right">
+                    <h3>Hanna</h3>
+                    You made it out early. How was your scan?
+                </section>
+                <section class="left">
+                    <h3>Ophilia</h3>
+                    The nurse acted a little weird, but they said nothing, so I guess it's good. How was yours?
+                </section>
+                <section class="right">
+                    <h3>Hanna</h3>
+                    Same as always as far as I can tell, I hope it's better than last month, I've been on point
+                    with my daily runs.
+                </section>
+                <section class="left ">
+                    <h3>Ophilia</h3>
+                    Didn't you score 97 last year? You can't get much better than that.
+                </section>
+
+                <div id="choice">
+                    <button class="slider-button " id="rankings">
+                        Talk about rankings
+                    </button>
+                    <button class="slider-button" id="nutrition">
+                        Talk about nutrition
+                    </button>
+                    <button class="slider-button" id="training">
+                        Talk about training
+                    </button>
+                    <button class="slider-button " id="home">
+                        Go Home
+                    </button>
+                </div>
+
+
+
+
+            </div>
+            <div class="path" id="ran">
+                <section class="right">
+                    <h3>Hanna</h3>
+                    The rankings are next week, I want to do my best. Aren't you nervous?
+                </section>
+                <section class="left">
+                    <h3>Ophilia</h3>
+                    Why would I? I followed tha plans, ate my meals, I can't imagine to be moved to another
+                    district.
+                </section>
+                <section class="left ">
+                    <h3>Hanna</h3>
+                    Yes I know, but it's still exciting, even when you know what's coming.
+
+                </section>
+            </div>
+
+
+            <div class="path" id="nut">
+                <section class="right">
+                    <h3>Hanna</h3>
+                    I think they might adjust my nutrition again, I burned 0,5% more carbs than last
+                    month.
+                </section>
+                <section class="left">
+                    <h3>Ophilia</h3>
+                    Classic. I got fewer dopamine drops last week over a 0.5-point dip.
+                </section>
+                <section class="left ">
+                    <h3>Hanna</h3>
+                    I'm glad that our system takes care of that, imagine having to read nutrition labels
+                    and calculate everything yourself like in the old times.
+
+                </section>
+            </div>
+
+            <div class="path" id="train">
+                <section class="right">
+                    <h3>Hanna</h3>
+                    Is your fitness plan still set to 7 AM
+                </section>
+                <section class="left">
+                    <h3>Ophilia</h3>
+                    No, it got moved to the afternoon. I thought it was a mistake.
+                </section>
+                <section class="left ">
+                    <h3>Hanna</h3>
+                    The system doesn’t make mistakes. You probably overthink and need longer warm-ups.
+                </section>
+            </div>
+            <div class="path end" id="hom">
+                <section class="right">
+                    <h3>Hanna</h3>
+                    Well, can't get better if you don't try. But let's go home, mom is waiting.
+                </section>
+                <section class="left">
+                    <h3>Ophilia</h3>
+                    Right, I hope I get a smoothie in my nutri-pack today!
+                </section>
+
+            </div>
+
+            <div class="arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+
+
+
+
+
+        <script src="script.js"></script>
+</body>
+
+</html>
