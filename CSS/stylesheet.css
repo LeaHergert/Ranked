@@ -174,8 +174,9 @@ g:hover .image-mapper-shape {
 }
 #mapDiv{
   display: none;
-    padding: 1em;
-    font-family: quicksand;
+  padding: 1em;
+  font-family: quicksand;
+  font-size: large;
   min-height: 4em;
   width: 80%;
   height: auto;
