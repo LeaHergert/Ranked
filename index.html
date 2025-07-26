@@ -116,8 +116,8 @@
                 <image xlink:href="Components/Interactions/Phone/menu.png" style="width: 2866px;"></image>
                 <a xlink:href="#" xlink:title="Not available">
                     <g>
-                        <circle onclick="toggleMenu('bTodo')" cx="568.1392752545291" cy="568.1392752545291"
-                            r="147.07571140638544" class="image-mapper-shape selected" data-index="1"></circle>
+                        <circle cx="568.1392752545291" cy="568.1392752545291" r="147.07571140638544"
+                            class="image-mapper-shape selected" data-index="1"></circle>
                     </g>
                 </a>
                 <a xlink:href="#" xlink:title="Map">
@@ -128,14 +128,14 @@
                 </a>
                 <a xlink:href="#" xlink:title="Not available">
                     <g>
-                        <circle onclick="toggleMenu('bContacts')" cx="654.0763084863067" cy="888.0160100617012"
-                            r="144.3380884528181" class="image-mapper-shape" data-index="8"></circle>
+                        <circle cx="654.0763084863067" cy="888.0160100617012" r="144.3380884528181"
+                            class="image-mapper-shape" data-index="8"></circle>
                     </g>
                 </a>
                 <a xlink:href="#" xlink:title="Not available">
                     <g>
-                        <circle onclick="toggleMenu('bHealth')" cx="1064.6643561492438" cy="759.1104602140348"
-                            r="147.07571140638544" class="image-mapper-shape" data-index="12"></circle>
+                        <circle cx="1064.6643561492438" cy="759.1104602140348" r="147.07571140638544"
+                            class="image-mapper-shape" data-index="12"></circle>
                     </g>
                 </a>
             </svg>
@@ -244,7 +244,7 @@
             <div class="path" id="tra">
                 <section class="right">
                     <h3>Hanna</h3>
-                    Is your fitness plan still set to 7 AM
+                    Is your fitness plan still set to 7 AM?
                 </section>
                 <section class="left">
                     <h3>Ophilia</h3>
@@ -312,57 +312,58 @@
 
         <div class="nextSliderCont" id="HO3">
             <div class="dialogue">
-                <section class="right">
+                <section class="right" id="kit1">
                     <h3>Mom</h3>
                     They gave you the new Smoothie variant? I worked on that flavor last quarter.
                 </section>
-                <section class="left">
+                <section class="left" id="kit2">
                     <h3>Ophilia</h3>
                     Mmh. It’s sweeter than last week. They lowered my acid levels again.
                 </section>
-                <section class="right">
+                <section class="right" id="kit3">
                     <h3>Hanna</h3>
                     That actually sounds… kind of nice.
                 </section>
-                <section class="left ">
+                <section class="left " id="kit4">
                     <h3>Ophilia</h3>
                     Don't be silly, it wouldn’t work for you.
                 </section>
-                <section class="right">
+                <section class="right" id="kit5">
                     <h3>Dad</h3>
                     Stick to your own blend, Hanna. The system knows what you need.
                 </section>
+
+                <div id="kit6" >
+                    On the day of the rankings...
+                </div>
+                <section class="right" id="kit7">
+                    <h3>Dad</h3>
+                    Alright. Business as usual, let’s check our Ranking.
+                </section>
+                <section class="left" id="kit8">
+                    <h3>Hanna</h3>
+                    Yes, 98!
+                </section>
+                <section class="right" id="kit9">
+                    <h3>Ophilia</h3>
+                    There has to be a mistake!
+                </section>
+                <section class="left " id="kit10">
+                    <h3>Mom</h3>
+                    What are you talking about? There are no mistakes.
+                </section>
+                <section class="right" id="kit11">
+                    <h3>Ophilia</h3>
+                    I ranked… 13.
+                </section>
+                <div id="kit12" >
+                    Thank you for playing my demo!
+                </div>
                 <div id="arrowFood">
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>
-
-           
-
-
-            </div>
-             <div class="nextSliderCont" id="HO4">
-                <div class="dialogue">
-                    <section class="right">
-                        <h3>Dad</h3>
-                        Alright. Business as usual, let’s check our Ranking.
-                    </section>
-                    <section class="left">
-                        <h3>Hanna</h3>
-                        Yes, 98!
-                    </section>
-                    <section class="right">
-                        <h3>Ophilia</h3>
-                        There has to be a mistake!
-                    </section>
-                    <section class="left ">
-                        <h3>Mom</h3>
-                        What are you talking about? There are no mistakes.
-                    </section>
-                    <div id="arrowFood">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
+        </div>
         </div>
         <script src="script.js"></script>
 </body>

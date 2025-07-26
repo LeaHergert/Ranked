@@ -97,11 +97,11 @@ function enter(){
   HouseMap.style.display = "none";
   document.getElementById("scene2").style.display = "none";
   HoMap.style.display = "none";
-
+  kit1 = document.getElementById("kit1");
   document.getElementById("scene3").style.display = "block";
   document.getElementById("HO3").style.display = "block";
-  KitchenList[0].style.display = "block";
-
+  kit1.style.display = "block";
+  i=1;
 
 }
 
@@ -124,10 +124,20 @@ arrow.onclick = function () {
 arrowFood.onclick = function () {
 
      i++;
-  KitchenList[i-1].style.display = "none";
-  KitchenList[i].style.display = "block";
+  
+  prevKitId = document.getElementById("kit"+ (i-1));   
+  console.log(prevKitId);
+  kitId = document.getElementById("kit" +i);
+  prevKitId.style.display = "none";
+  kitId.style.display = "block";
   console.log("i: " + i);
-  if (i == KitchenList.length - 1) {
+  if (i == 6 || i ==12) {
+  document.getElementById("HO3").classList.add("black");
+  }
+  if (i == 7) {
+  document.getElementById("HO3").classList.remove("black");
+  }
+  if (i == 12) {
     // List[i + 1].style.display = "block";
     arrowFood.style.display = "none";
     // choice.style.display = "grid";
